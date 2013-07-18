@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html ng-app="thoughtsApp">
+
+    <head>
+        <title>Thoughts</title>
+    </head>
+
+    <body>
+
+        <section ng-controller="ThoughtController">
+
+            <form ng-submit="addThought()">
+
+                <input ng-model="thought" placeholder="What are you thinking?">
+
+            </form>
+
+            <table>
+
+                <tr ng-repeat="aThought in thoughts">
+
+                    <td>{{aThought}}</td>
+
+                </tr>
+
+            </table>
+
+        </section>
+
+        <script src="/javascripts/lib/angular.min.js"></script>
+        <script src="/javascripts/app/thoughts-app.js"></script>
+        <script src="/javascripts/app/thought-controller.js"></script>
+    </body>
+</html>
