@@ -19,7 +19,7 @@
 
             <table>
 
-                <tr ng-repeat="aThought in thoughts">
+                <tr ng-repeat="aThought in thoughts | orderBy:'toString()':false">
 
                     <td>{{aThought}}</td>
 
