@@ -1,11 +1,12 @@
 
-angular.module('thoughtsApp').controller('ThoughtController', function($scope) {
+angular.module('thoughtsApp').controller('ThoughtController', function($scope, ThoughtFactory) {
 
-    $scope.thoughts = [];
+    $scope.thoughts = ThoughtFactory.getThoughts();
 
     $scope.addThought = function() {
 
-        $scope.thoughts.push($scope.thought);
+        ThoughtFactory.rememberThought ($scope.thought);
+
         delete $scope.thought;
 
     };
