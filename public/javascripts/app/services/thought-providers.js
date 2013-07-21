@@ -3,19 +3,25 @@ angular.module('thoughtProviders', []);
 
 angular.module('thoughtProviders').factory('ThoughtFactory', function() {
 
-    var thoughts = ['JavaScript is everywhere!', 'AngularJS + NodeJS <3'],
+    var thoughts = [],
 
         thoughtFactory = {
+
+            prefix: '',
 
             getThoughts: function() {
                 return thoughts;
             },
 
             rememberThought: function(thought) {
-                thoughts.push(thought);
+                thoughts.push(this.prefix + thought);
+            },
+
+            prefixThoughts: function(prefix) {
+                this.prefix = prefix;
             }
 
-        };
+        }
 
     return thoughtFactory;
 

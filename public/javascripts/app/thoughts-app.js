@@ -11,4 +11,8 @@ angular.module('thoughtsApp').config(function($routeProvider) {
 
         .otherwise('/');
 
+}).run(function(ThoughtFactory) {
+
+        ThoughtFactory.prefixThoughts('Umm...');
+
 });
