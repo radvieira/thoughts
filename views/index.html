@@ -6,12 +6,14 @@
     </head>
 
     <body>
-
+        <h1>Thoughts</h1>
         <section ng-controller="ThoughtController">
 
             <form ng-submit="addThought()">
 
-                <input ng-model="thought" placeholder="What are you thinking?">
+                <label for="thought-input">What were you thinking?!</label>
+
+                <input id="thought-input" ng-model="thought">
 
             </form>
 
@@ -29,6 +31,6 @@
 
         <script src="/javascripts/lib/angular.min.js"></script>
         <script src="/javascripts/app/thoughts-app.js"></script>
-        <script src="/javascripts/app/thought-controller.js"></script>
+        <script src="/javascripts/app/controllers/thought-controller.js"></script>
     </body>
 </html>
