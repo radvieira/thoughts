@@ -6,27 +6,14 @@
     </head>
 
     <body>
-        <h1>Thoughts</h1>
-        <section ng-controller="ThoughtController">
 
-            <form ng-submit="addThought()">
+        <nav>
+            <a href='/'>Simple</a>
+            <a href='#/deep-thoughts'>Deep</a>
+        </nav>
 
-                <label for="thought-input">What were you thinking?!</label>
-
-                <input id="thought-input" ng-model="thought">
-
-            </form>
-
-            <table>
-
-                <tr ng-repeat="aThought in thoughts | orderBy:'toString()':false">
-
-                    <td>{{aThought}}</td>
-
-                </tr>
-
-            </table>
-
+        <section ng-view>
+            <!--This is where our pages will be displayed-->
         </section>
 
         <script src="/javascripts/lib/angular.min.js"></script>

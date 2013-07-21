@@ -1,0 +1,22 @@
+<h1>Deep Thoughts</h1>
+<div>
+
+    <form ng-submit="addThought()">
+
+        <label for="thought-input">What were you thinking?!</label>
+
+        <input id="thought-input" ng-model="thought">
+
+    </form>
+
+    <table>
+
+        <tr ng-repeat="aThought in thoughts | orderBy:'toString()':false">
+
+            <td>{{aThought}}...woah, that was deep.</td>
+
+        </tr>
+
+    </table>
+
+</div>
