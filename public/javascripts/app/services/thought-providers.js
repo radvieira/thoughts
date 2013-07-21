@@ -1,5 +1,7 @@
 
-angular.module('thoughtsApp').factory('ThoughtFactory', function() {
+angular.module('thoughtProviders', []);
+
+angular.module('thoughtProviders').factory('ThoughtFactory', function() {
 
     var thoughts = ['JavaScript is everywhere!', 'AngularJS + NodeJS <3'],
 

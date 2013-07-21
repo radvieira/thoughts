@@ -1,5 +1,7 @@
 
-angular.module('thoughtsApp').controller('ThoughtController', function($scope, ThoughtFactory) {
+angular.module('thoughtControllers', ['thoughtProviders']);
+
+angular.module('thoughtControllers').controller('ThoughtController', function($scope, ThoughtFactory) {
 
     $scope.thoughts = ThoughtFactory.getThoughts();
 

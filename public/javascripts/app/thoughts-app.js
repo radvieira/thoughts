@@ -1,2 +1,2 @@
 
-angular.module('thoughtsApp', []);
+angular.module('thoughtsApp', ['thoughtControllers', 'thoughtProviders']);
