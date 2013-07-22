@@ -1,5 +1,5 @@
 
-angular.module('thoughtsApp', ['thoughtControllers', 'thoughtProviders']);
+angular.module('thoughtsApp', ['thoughtControllers', 'thoughtProviders', 'thoughtDirectives']);
 
 angular.module('thoughtsApp').config(function($routeProvider) {
 

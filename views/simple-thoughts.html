@@ -11,11 +11,21 @@
 
     <table>
 
-        <tr ng-repeat="aThought in thoughts | orderBy:'toString()':false">
+        <tbody>
+            <tr ng-repeat="aThought in thoughts | orderBy:'toString()':false">
 
-            <td>{{aThought}}</td>
+                <td>{{aThought}}</td>
 
-        </tr>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <td>
+                    <thought-counter />
+                </td>
+            </tr>
+        </tfoot>
 
     </table>
 
