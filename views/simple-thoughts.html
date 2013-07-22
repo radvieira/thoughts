@@ -10,11 +10,17 @@
     </form>
 
     <table>
-
+        <thead>
+            <tr>
+                <td>
+                    <input id="thought-search" ng-model="thoughtSearch" placeholder="Find a thought" style="width: 285px">
+                </td>
+            </tr>
+        </thead>
         <tbody>
-            <tr ng-repeat="aThought in thoughts | orderBy:'toString()':false">
+            <tr ng-repeat="aThought in thoughts | filter: thoughtSearch | orderBy:'toString()':false">
 
-                <td>{{aThought}}</td>
+                <td>{{aThought | lowercase }}</td>
 
             </tr>
         </tbody>
